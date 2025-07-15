@@ -10,7 +10,8 @@
         {{- $pages := partial "utils/sort-pages" (dict "page" . "by" site.Params.blog.list.sortBy "order" site.Params.blog.list.sortOrder) -}}
         {{- range $pages }}
           <div class="hx:mb-10 hx:sm:flex hx:gap-4 hx:mt-8">
-              <img src="{{ .Params.image }}" alt="{{ .Title }}" class="hx:rounded-lg hx:aspect-square" style="object-fit: cover; height: 200px; aspect-ratio: 1 / 1;">
+              <img id="blog-image-1" src="{{ .Params.image }}" alt="{{ .Title }}" >
+              <img id="blog-image-2" src="{{ .Params.image }}" alt="{{ .Title }}" >
             <div>
               <h3><a style="color: inherit; text-decoration: none;" class="hx:block hx:font-semibold hx:text-2xl " href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
               {{ if site.Params.blog.list.displayTags }}

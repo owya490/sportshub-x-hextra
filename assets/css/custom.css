@@ -1,0 +1,32 @@
+
+#blog-image-1,
+#blog-image-2 {
+  object-fit: cover;
+  height: 200px;
+  border-radius: 0.5rem; /* equivalent to Tailwind's rounded-lg */
+  margin-bottom: 0.5rem;
+}
+
+/* blog-image-1: hidden by default, shown on sm and up (≥640px) */
+#blog-image-1 {
+  display: none;
+  aspect-ratio: 1 / 1;
+}
+@media (min-width: 640px) {
+  #blog-image-1 {
+    display: block;
+  }
+}
+
+/* blog-image-2: shown by default, hidden on sm and up */
+#blog-image-2 {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 640px) {
+  #blog-image-2 {
+    display: none;
+  }
+}
